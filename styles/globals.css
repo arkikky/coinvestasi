@@ -1,35 +1,283 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  @apply bg-secondary/70 text-white;
+}
+
+/* Init */
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @apply text-black-100 font-inter text-base font-normal;
 }
 
-* {
-  box-sizing: border-box;
+body::-webkit-scrollbar {
+  @apply w-2;
 }
 
-main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+body::-webkit-scrollbar-track {
+  @apply bg-blue-300/30;
 }
 
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
+body::-webkit-scrollbar-thumb {
+  @apply bg-gray-500/50;
+  @apply rounded-full;
+  @apply border-none;
 }
 
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* Scrollbar (Theme) */
+.scrllBrY::-webkit-scrollbar {
+  @apply w-1;
+}
+
+.scrllBrY::-webkit-scrollbar-track {
+  @apply bg-blue-300/20;
+}
+
+.scrllBrY::-webkit-scrollbar-thumb {
+  @apply bg-gray-500/50;
+  @apply rounded-full;
+  @apply border-none;
+}
+
+.scrllBrX::-webkit-scrollbar {
+  @apply h-1;
+}
+
+.scrllBrX::-webkit-scrollbar-track {
+  @apply bg-blue-300/20;
+}
+
+.scrllBrX::-webkit-scrollbar-thumb {
+  @apply bg-gray-500/50;
+  @apply rounded-full;
+  @apply border-none;
+}
+
+/* Nav (Menu) */
+.menu {
+  @apply pl-0;
+}
+
+.menu .menu-item {
+  @apply mb-1.5 last:mb-0;
+}
+
+.menu .menu-item>a {
+  @apply text-gray-400 hocus:text-white font-inter text-sm font-normal leading-relaxed;
+  @apply transition duration-300 ease-in-out;
+}
+
+/* Nav (Menu - Row) */
+.menu.menu-row {
+  @apply flex flex-row items-center;
+}
+
+.menu.menu-row .menu-item {
+  @apply mr-4 last:mr-0 mb-0;
+}
+
+.menu.menu-row .menu-item>a {
+  @apply text-black-100 hocus:text-primary font-inter text-sm font-medium leading-relaxed;
+  @apply py-2 px-2;
+  @apply transition duration-300 ease-in-out;
+}
+
+/* Buttons */
+.btn::before {
+  @apply content-[''];
+  @apply absolute inset-y-0 inset-x-0;
+  box-shadow: -5px 6px 0px 2px theme("backgroundColor.black.900");
+
+  @apply z-px;
+}
+
+.btn-pill::before {
+  @apply rounded-full;
+}
+
+/* Buttons (Disabled - Solid) */
+.btn-primary.disabled ,
+.btn-secondary.disabled ,
+.btn-success.disabled ,
+.btn-danger.disabled,
+.btn-subtle.disabled,
+.btn-white.disabled {
+  @apply opacity-60;
+}
+
+/* Buttons (Disabled - Outline) */
+[class*="btn-outline-"]::before {
+  @apply hidden;
+}
+
+[class*="btn-outline-"].disabled {
+  @apply opacity-60;
+}
+
+/* Forms (Type - Time) */
+input[type="date"i]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"i]::-webkit-calendar-picker-indicator,
+input[type="month"i]::-webkit-calendar-picker-indicator,
+input[type="week"i]::-webkit-calendar-picker-indicator,
+input[type="time"i]::-webkit-calendar-picker-indicator {
+  @apply cursor-pointer;
+  @apply bg-primary;
+  @apply  border-0 border-l-2 border-solid border-black-100; 
+  background-size: 24px 24px;
+  @apply bg-center;
+  @apply absolute inset-y-0 right-0;
+  @apply p-0 m-0;
+  @apply h-auto w-14;
+
+  @apply z-50;
+}
+
+/* Slider (Plugin - Splide) */
+/* Grayscale (Brand Logo) */
+.grayscleBrndLgo li {
+  @apply grayscale hocus:grayscale-0;
+
+  @apply transition duration-300 ease-in-out;
+}
+
+.grayscleBrndLgo li.is-active {
+  @apply grayscale-0;
+}
+
+/* Backdrop Shadow (Brand Logo - Left & Right) */
+.backdrpShadwBrndLgo .splide__track {
+  @apply relative;
+}
+
+.backdrpShadwBrndLgo .splide__track::before {
+  @apply content-[''];
+  @apply flex;
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  @apply absolute inset-y-0 -left-px;
+  @apply h-full w-8;
+
+  @apply z-[5];
+}
+
+.backdrpShadwBrndLgo .splide__track::after {
+  @apply content-[''];
+  @apply flex;
+  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  @apply absolute inset-y-0 -right-px;
+  @apply h-full w-8;
+
+  @apply z-[5];
+}
+
+/* Article */
+.artcle {
+  @apply mt-4 sm:mt-8;
+}
+
+.artcle .artcleMain {
+  @apply flex flex-row items-start;
+}
+
+.artcle .artcleTitle {
+  @apply text-sm sm:h4;
+  @apply line-clamp-2;
+}
+
+.artcle .artcleDesc {
+  @apply hidden sm:line-clamp-2;
+  @apply mt-0 sm:mt-2;
+  @apply w-full max-w-[120px] sm:max-w-[453px] lg:max-w-[373px] xl:max-w-[527px];
+}
+
+.artcle .artcleDate {
+  @apply text-body-caption sm:text-body-base font-medium sm:font-medium mt-0 sm:mt-2;
+}
+
+.artcle .artcleImags {
+  @apply flex-1;
+  @apply h-[72px] sm:h-[128px];
+  @apply max-h-[72px] sm:max-h-[128px];
+  @apply w-[123px] sm:w-[224px];
+  @apply min-w-[123px] sm:min-w-[224px];
+  @apply max-w-[123px] sm:max-w-[224px];
+}
+
+/* Article (Group) */
+.artcleGrop .artcle:first-child ,
+.artcle:first-child {
+  @apply mt-0;
+}
+
+.artcleGrop .artcle:first-child .artcleMain ,
+.artcleGrdGrop .artcle:first-child .artcleMain {
+  @apply flex flex-col-reverse sm:flex-row lg:flex-col-reverse xl:flex-row items-start;
+}
+
+.artcleGrop .artcle:first-child .artcleTitle ,
+.artcleGrdGrop .artcle:first-child .artcleTitle {
+  @apply h4 sm:h3 mt-2 sm:mt-0 lg:mt-2 xl:mt-0;
+}
+
+.artcleGrop .artcle:first-child .artcleDesc {
+  @apply hidden sm:line-clamp-2;
+  @apply w-full max-w-[381px] lg:max-w-[587px] xl:max-w-[381px] 2xl:max-w-[481px];
+}
+
+.artcleGrop .artcle:first-child .artcleDate {
+  @apply text-body-sm sm:text-body-base font-medium sm:font-semibold mt-2;
+}
+
+.artcleGrop .artcle:first-child .artcleImags ,
+.artcleGrdGrop .artcle:first-child .artcleImags {
+  @apply flex-none sm:flex-1 lg:flex-none xl:flex-1;
+  @apply h-[198px] sm:h-[216px] lg:h-[339px] xl:h-[216px];
+  @apply max-h-[198px] sm:max-h-[216px] lg:max-h-[339px] xl:max-h-[216px];
+  @apply w-full sm:w-[380px];
+  @apply min-w-full sm:min-w-[380px] lg:min-w-full xl:min-w-[380px];
+  @apply max-w-full sm:max-w-[380px] lg:max-w-full xl:max-w-[380px];
+}
+
+/* Article (Grid - Group) */
+.artcleGrdGrop {
+  @apply supports-grid:grid grid-cols-2 gap-y-4 sm:gap-y-6 gap-x-4;
+}
+
+.artcleGrdGrop .artcle:first-child {
+  @apply col-span-full; 
+}
+
+.artcleGrdGrop .artcle {
+  @apply col-span-1 sm:col-span-full lg:col-span-1 xl:col-span-full;
+  @apply mt-0;
+} 
+
+.artcleGrdGrop .artcle .artcleMain {
+  @apply flex flex-col-reverse sm:flex-row lg:flex-col-reverse xl:flex-row items-start;
+}
+
+.artcleGrdGrop .artcle .artcleTitle {
+  @apply line-clamp-2;
+  @apply mt-2 sm:mt-0 lg:mt-2 xl:mt-0;
+}
+
+.artcleGrdGrop .artcle .artcleDesc {
+  @apply hidden sm:line-clamp-2 lg:hidden xl:line-clamp-2;
+}
+
+.artcleGrop .artcle .artcleDate {
+  @apply text-body-sm sm:text-body-base font-medium sm:font-semibold mt-0;
+}
+
+.artcleGrdGrop .artcle .artcleImags {
+  @apply flex-none sm:flex-1 lg:flex-none xl:flex-1;
+  @apply h-[94px] sm:h-[128px] lg:h-[167px] xl:h-[128px];
+  @apply max-h-[94px] sm:max-h-[128px] lg:max-h-[167px] xl:max-h-[128px];
+  @apply w-full sm:w-[224px] lg:w-full xl:w-[224px];
+  @apply min-w-full sm:min-w-[224px] lg:min-w-full xl:min-w-[224px];
+  @apply max-w-full sm:max-w-[224px] lg:max-w-full xl:max-w-[224px];
 }

@@ -1,0 +1,52 @@
+/* Card (Subscribe)  */
+.subscribe {
+  @apply relative;
+  @apply py-4 sm:py-6 px-4 sm:px-6;
+}
+
+.subscribe::before {
+  @apply content-[''];
+  @apply absolute inset-y-0 inset-x-0;
+  box-shadow: -6px 7px 0px 0px theme("backgroundColor.black.900");
+
+  @apply -z-px;
+}
+ 
+/* Featured (Event) */
+.featredEvnt {
+  @apply flex flex-col;
+}
+
+.featredEvntCntent {
+  @apply bg-white;
+  @apply relative;
+  @apply border-2 border-solid border-black-100;
+}
+
+.featredEvntCntent::before {
+  @apply content-[''];
+  @apply absolute inset-y-0 inset-x-0;
+  box-shadow: -7px 7px 0px 1px theme("backgroundColor.primary");
+
+  @apply -z-px;
+} 
+
+/* Featured Article (Popular) */
+.ArtclePoplar {
+  @apply relative;
+  @apply py-4 sm:py-6 px-4 sm:px-6;
+}
+
+.ArtclePoplar::before {
+  @apply content-[''];
+  @apply absolute inset-y-0 inset-x-0;
+  box-shadow: -6px 7px 0px 0px theme("backgroundColor.black.900");
+
+  @apply -z-px;
+}
+
+.ArtclePoplarContnt a {
+  @apply flex flex-col;
+  @apply border-b last:border-b-0 border-solid border-black-50;
+  @apply pb-4 last:pb-0;
+} 

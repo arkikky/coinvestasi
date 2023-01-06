@@ -1,0 +1,31 @@
+[{
+    "id": 1,
+    "url": "https://www.facebook.com/Coinvestasi/",
+    "icons": "/assets/images/social-media/facebook-white.svg"
+  },
+  {
+    "id": 2,
+    "url": "https://www.instagram.com/coinvestasi/",
+    "icons": "/assets/images/social-media/twitter-white.svg"
+  },
+  {
+    "id": 3,
+    "url": "https://twitter.com/coinvestasi/",
+    "icons": "/assets/images/social-media/instagram-white.svg"
+  },
+  {
+    "id": 4,
+    "url": "https://www.youtube.com/coinvestasi",
+    "icons": "/assets/images/social-media/linkedin-white.svg"
+  },
+  {
+    "id": 5,
+    "url": "https://t.me/komunitascoinvestasi",
+    "icons": "/assets/images/social-media/youtube-white.svg"
+  },
+  {
+    "id": 6,
+    "url": "https://www.linkedin.com/company/coinvestasi/",
+    "icons": "/assets/images/social-media/telegram-white.svg"
+  }
+]

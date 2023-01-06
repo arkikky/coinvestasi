@@ -1,0 +1,26 @@
+.formLabel {
+  @apply text-black-900 font-inter text-base font-medium;
+}
+
+.form {
+  @apply bg-white;
+  @apply border-2 border-solid border-black-100 rounded-none;
+  @apply text-black-100 placeholder:text-gray-300;
+  @apply font-inter text-sm font-medium tracking-wide;
+  @apply outline-none hocus:outline-none;
+  @apply relative; 
+  @apply py-4 px-4;
+  @apply w-full;
+
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.formSmall {
+  @apply text-xs;
+  @apply py-3 px-3;
+}
+
+.formLarge {
+  @apply text-base;
+  @apply py-4 px-3.5;
+}

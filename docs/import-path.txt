@@ -1,0 +1,68 @@
+/* -------------------------------------------
+- Link's
+---------------------------------------------- */
+
+// Dynamic import
+import dynamic from "next/dynamic";
+
+Init
+import Test from "/...";
+
+// Svg
+const ExternalLink = dynamic(() => import("@svg/ExternalLink.svg"));
+
+// Css
+import Menu from "@styles/components/Menu.module.css";
+import Card from "@styles/components/Card.module.css";
+import Forms from "@styles/components/Forms.module.css";
+
+// Ui
+const Container = dynamic(() => import("@components/UI/Container"));
+
+const Forms = dynamic(() => import("@components/UI/Forms"));
+const Buttons = dynamic(() => import("@components/UI/Buttons/Buttons"));
+const Input = dynamic(() => import("@components/UI/Forms/Input"));
+const TextArea = dynamic(() => import("@components/UI/Forms/TextArea"));
+const Post = dynamic(() => import("@components/UI/Post/Post"));
+
+// Components
+const Head = dynamic(() => import("@components/UI/Container"));
+
+const SubHeading = dynamic(() => import("@components/Sections/Sub-Heading/SubHeading"));
+const SubHeadingWithBorder = dynamic(() => import("@components/Sections/Sub-Heading/SubHeadingWithBorder"));
+const ImagesFill = dynamic(() => import("@components/UI/Images/ImagesFill"));
+
+const Article = dynamic(() => import("@components/UI/Article/Article"));
+const ListArticle = dynamic(() => import("@components/UI/Article/ListArticle"));
+const FeaturedArticle = dynamic(() =>
+  import("@components/UI/Card/FeaturedArticle")
+);
+const Study = dynamic(() => import("@components/UI/Article/Study"));
+const CardSubscribe = dynamic(() => import("@components/Sections/Card/Subscribe"));
+
+/* -------------------------------------------
+- Component's
+---------------------------------------------- */
+// Buttons With Icons
+ <Buttons
+  typeBtn="btn-icon"
+  label="Primary"
+  variants="btn-primary"
+  size="sm"
+  text="capitalize"
+  withIcons={true}
+  positionIcons="right"
+>
+  <ArrowUpRightIcon className="stroke-current stroke-[3.5] ml-1 h-3 w-3" />
+</Buttons>
+
+// Sub Heading
+<SubHeading
+  typeSubHeading="default"
+  title="Acara Cryptocurrency dan Blockchain"
+  typeBtn="link"
+  labelBtn="Lihat semua acara"
+  url={""}
+/>
+
+// Images

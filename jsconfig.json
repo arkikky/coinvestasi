@@ -1,9 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
+      "@svg/*": ["components/SVG/*"],
+      "@utils/*": ["utils/*"],
+      "@styles/*": ["styles/*"],
+      "@controller/*": ["controller/*"],
       "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"]
+      "@section/*": ["section/*"],
+      "@layouts/*": ["layouts/*"],
+      "@pages-layouts/*": ["pages/layouts/*"],
+      "@pages-section/*": ["pages/section/*"]
     }
   }
 }

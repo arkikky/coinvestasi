@@ -1,0 +1,12 @@
+/* Banner (Event) */
+.BnnerContnt {
+  @apply relative;
+}
+
+.BnnerContnt::before {
+  @apply content-[''];
+  @apply absolute inset-y-0 inset-x-0;
+  box-shadow: -7px 7px 0px 1px theme("backgroundColor.primary");
+
+  @apply -z-px;
+}

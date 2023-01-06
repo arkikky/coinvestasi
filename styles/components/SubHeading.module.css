@@ -1,0 +1,11 @@
+/* Sub Heading (With Border) */
+.subHdingBorderBottom {
+  @apply relative;
+}
+
+.subHdingBorderBottom::after {
+  @apply content-[''];
+  @apply bg-gray-400;
+  @apply absolute top-auto inset-x-0 bottom-0;
+  @apply h-px w-full;
+}

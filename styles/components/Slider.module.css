@@ -1,0 +1,4 @@
+/* Inline Brand Logo */
+.inlneBrandLogo li {
+  @apply flex items-center justify-center;
+}

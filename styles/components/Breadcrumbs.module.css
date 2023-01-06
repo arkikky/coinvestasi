@@ -1,0 +1,96 @@
+/* Breadcrumbs */
+.bredcrumbs {
+  @apply flex flex-wrap list-none;
+  @apply mx-0 w-full min-w-max max-w-full;
+}
+
+.bredcrumbs li {
+  @apply cursor-pointer;
+  @apply flex items-center;
+  @apply hocus:text-secondary;
+  @apply relative;
+
+  @apply transition duration-300 ease-in-out;
+}
+
+.bredcrumbs li:first-child {
+  @apply text-secondary hocus:text-secondary;
+}
+
+.bredcrumbs li::after {
+  @apply content-[''];
+  @apply inline-flex;
+  @apply bg-gray-300;
+  @apply my-auto mx-2.5;
+  @apply h-4 w-0.5;
+
+  @apply transition duration-300 ease-in-out;
+}
+
+.bredcrumbs li:last-child::after {
+  @apply hidden;
+}
+
+/* Breadcrumbs (Line Rotate) */
+.bredcrumbsRotate li::after {
+  @apply transform rotate-[13deg];
+}
+
+
+/* Breadcrumbs Pointer (Label / Link) */
+.bredcrumbsPointer li::after {
+  @apply content-[''];
+  @apply inline-flex;
+  @apply bg-black-100;
+  @apply rounded-full;
+  @apply my-auto mx-1.5;
+  @apply h-[3px] w-[3px];
+}
+
+.bredcrumbsPointer li:first-child {
+  @apply text-secondary;
+}
+
+.bredcrumbsPointer li:last-child::after {
+  @apply hidden;
+}
+
+/* Breadcrumbs Carret (Label / Link) */
+.bredcrumbsCarret li::after {
+  @apply content-[''];
+  @apply bg-transparent;
+  @apply bg-no-repeat bg-center;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.7695 11.8079L10.3121 8.09346C9.79109 7.65924 9 8.02976 9 8.70803V15.292C9 15.9702 9.79109 16.3408 10.3121 15.9065L14.7695 12.1921C14.8895 12.0921 14.8895 11.9079 14.7695 11.8079Z' fill='%23A6B0C0'/%3e%3c/svg%3e ");
+  background-size: 24px 24px;
+  @apply inline-flex;
+  @apply my-auto mx-0.5;
+  @apply h-6 w-6;
+}
+
+.bredcrumbsCarret li:first-child {
+  @apply text-secondary;
+}
+
+.bredcrumbsCarret li:last-child::after {
+  @apply hidden;
+}
+
+/* Breadcrumbs Carret (Label / Link) */ 
+.bredcrumbsTags {
+  @apply flex flex-wrap;
+}
+
+.bredcrumbsTags li {
+  @apply flex-1 grow items-center justify-center;
+  @apply bg-blue-50 whitespace-nowrap;
+  @apply mr-2 last:mr-0;
+  @apply py-4 px-4;
+  @apply w-max min-w-[128px] xl:min-w-max max-w-full;
+}
+.bredcrumbsTags li:first-child {
+  @apply text-black-100;
+}
+
+.bredcrumbsTags li::after {
+  @apply hidden;
+}

@@ -1,0 +1,19 @@
+/* List Article */
+.listArticle {
+  @apply mt-4 first:mt-0;
+}
+
+/* Small Article */
+.smllArticle {
+  @apply mr-2 sm:mr-6 last:mr-0;
+  @apply min-w-[247px] max-w-[247px];
+}
+
+/* Study (Article) */
+.studyBsaCrypto {
+  @apply flex flex-col h-full;
+}
+
+.studyBsaCryptoMain {
+  @apply flex flex-col justify-between py-6 sm:py-8 px-6 sm:px-8 h-full;
+}

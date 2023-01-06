@@ -1,0 +1,38 @@
+/* Footer */
+.footr {
+  @apply bg-blue-600;
+}
+
+.footrEnd {
+  @apply before:content-[''] before:flex before:bg-blue-500 before:absolute before:top-0 before:inset-x-0 before:h-[1px] before:w-full;
+
+  @apply flex flex-col lg:flex-row items-start lg:items-center justify-between relative py-6;
+} 
+
+/* Footer (Label) */
+.footrLbelLink {
+  @apply flex flex-wrap list-none;
+  @apply mx-0 w-max;
+}
+
+.footrLbelLink li {
+  @apply flex items-center;
+}
+
+.footrLbelLink li::after {
+  @apply content-[''];
+  @apply inline-flex;
+  @apply bg-white;
+  @apply rounded-full;
+  @apply my-auto mx-1.5;
+  @apply h-[3px] w-[3px];
+}
+
+.footrLbelLink li:last-child::after {
+  @apply hidden;
+}
+
+/* Footer (Group Menu) */
+.footrGroupMnu {
+  @apply mt-6 first:mt-0 sm:mt-0;
+}

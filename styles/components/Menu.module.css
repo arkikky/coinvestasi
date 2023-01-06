@@ -1,0 +1,27 @@
+/* Menu Pointer (Label / Link) */
+.mnuPointer {
+  @apply flex flex-wrap list-none;
+  @apply mx-0 w-max;
+}
+
+.mnuPointer li {
+  @apply flex items-center;
+  @apply relative;
+}
+
+.mnuPointer li::after {
+  @apply content-[''];
+  @apply inline-flex;
+  @apply bg-black-100;
+  @apply rounded-full;
+  @apply my-auto mx-1.5;
+  @apply h-[3px] w-[3px];
+}
+
+.mnuPointer li:first-child {
+  @apply text-secondary;
+}
+
+.mnuPointer li:last-child::after {
+  @apply hidden;
+}
