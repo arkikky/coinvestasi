@@ -30,9 +30,9 @@ const Article = ({
   const addDesc = description
     ? description
     : data != null
-    ? // ? data.content.rendered.toString()
-      `First &middot; Seconds <div>This is the dangerouslySetInnerHTML data</div>`
-    : `${process.env.NEXT_PUBLIC_DESC_LOREM}`; // data.content.rendered or for test `First &middot; Seconds <div>This is the dangerouslySetInnerHTML data</div>`
+    ? data.content.rendered.toString()
+    : // ? `First &middot; Seconds <div>This is the dangerouslySetInnerHTML data</div>`
+      `${process.env.NEXT_PUBLIC_DESC_LOREM}`; // data.content.rendered or for test `First &middot; Seconds <div>This is the dangerouslySetInnerHTML data</div>`
   const addDate = data
     ? data.modified
     : date
